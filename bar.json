@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Behaviour of humpback whales", "subtitle": "Where recorded by observer"},
+    "data": {
+        "url": "https://raw.githubusercontent.com/h8nn8h/DV2/refs/heads/main/data/behavior_counts.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "y": { "field": "count", "type": "quantitative", "title":"Number observed"},
+        "x": { "field": "behavior", "type": "nominal", "title": "Behaviour"},
+            "tooltip": [
+      { "field": "behavior", "type": "nominal", "title": "Behaviour" },
+      { "field": "count", "type": "quantitative", "title": "Number observed" }
+    ]
+    }
+}
